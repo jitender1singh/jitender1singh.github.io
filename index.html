@@ -29,9 +29,21 @@
     <br><br>
     <input name="submit" type="submit" value="submit"/>
 </form> 
-    </body> 
-    <script>
-    analytics.identify( 
+<script type="text/javascript">
+    
+     function identify(e){
+        e.preventDefault();
+        var form = e.target;
+        var email = form["email"].value;
+        var destination = form["destination"].value;
+        
+        var user = {
+            email: email, 
+            fullname: fullname, 
+            destination: destination 
+        };
+    
+    analytics.identify(user.fullname, 
     {
   name: '{{ user.fullname }}',
   email: '{{ user.email }}',
@@ -45,5 +57,6 @@
 });
         
             </script>
+        </body> 
 
 </html>
