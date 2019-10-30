@@ -29,6 +29,16 @@
     <br><br>
     <input name="submit" type="submit" value="submit"/>
 </form> 
-    <!--Placeholder for identify and track script -->
-</body> 
+analytics.identify('{{ user.id }}', {
+  name: '{{ user.fullname }}',
+  email: '{{ user.email }}'
+});
+    
+    
+    analytics.track('Form Completed', {
+  title: 'Travel Information',
+  course: 'Preferences',
+});
+    
+    </body> 
 </html>
