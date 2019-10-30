@@ -28,6 +28,13 @@
     Email: <input name="email" required="" size="75" type="email"/> 
     <br><br>
     <input name="submit" type="submit" value="submit"/>
+    
+    onsubmit="identify(event)"
+    analytics.track('Form Completed', {
+    title: 'Travel Information',
+    course: 'Preferences',
+});
+    
 </form> 
 <script type="text/javascript">
     
@@ -43,6 +50,8 @@
             destination: destination 
         };
     
+          
+
     analytics.identify(user.fullname, 
     {
   name: '{{ user.fullname }}',
@@ -51,10 +60,7 @@
 });
     
     
-    analytics.track('Form Completed', {
-  title: 'Travel Information',
-  course: 'Preferences',
-});
+ 
       
                  alert('done');
      }
