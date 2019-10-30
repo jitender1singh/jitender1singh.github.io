@@ -29,7 +29,9 @@
     <br><br>
     <input name="submit" type="submit" value="submit"/>
 </form> 
-analytics.identify('{{ user.id }}', {
+    
+analytics.identify( 
+    {
   name: '{{ user.fullname }}',
   email: '{{ user.email }}',
   travel: '{{ user.destination }}
