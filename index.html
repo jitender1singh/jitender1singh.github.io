@@ -29,8 +29,9 @@
     <br><br>
     <input name="submit" type="submit" value="submit"/>
 </form> 
+    </body> 
     
-analytics.identify( 
+    analytics.identify( 
     {
   name: '{{ user.fullname }}',
   email: '{{ user.email }}',
@@ -42,6 +43,4 @@ analytics.identify(
   title: 'Travel Information',
   course: 'Preferences',
 });
-    
-    </body> 
 </html>
