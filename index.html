@@ -17,6 +17,8 @@ pix('config', {key: "fuHf2L95cErpYO6gTMtOAMdGVAbPCwWY", snippetVersion: "0.0.1"}
 pix('pageview');
 var n = document.createElement("script");n.type = "text/javascript"; n.async = !0; n.src = "https://cdn.pixelme.me/pix.min.js"; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(n, a);
 </script>
+    <script>var queryForm=function(e){var t=!(!e||!e.reset)&&e.reset,n=window.location.toString().split("?");if(n.length>1){var r=n[1].split("&");for(i in r){var o=r[i].split("=");(t||null===sessionStorage.getItem(o[0]))&&sessionStorage.setItem(o[0],o[1])}}for(var s=document.querySelectorAll("input[type=hidden]"),i=0;i<s.length;i++){var a=sessionStorage.getItem(s[i].name);a&&(document.getElementById(s[i].name).value=a)}};queryForm();</script>
+
     
 </head> 
 <body> 
@@ -72,4 +74,19 @@ var n = document.createElement("script");n.type = "text/javascript"; n.async = !
             </script>
         </body> 
 
+<body>
+  <form action="#" enctype="text/plain">
+    <label for="email">Email</label>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="hidden" name="utm_source" value="">
+    <input type="hidden" name="utm_medium" value="">
+    <input type="hidden" name="utm_campaign" value="">
+    <input type="submit" value="Submit">
+  </form>
+
+  <script src="path-to-script/sup.min.js"></script>
+  <script>
+  queryForm();
+  </script>
+</body>
 </html>
